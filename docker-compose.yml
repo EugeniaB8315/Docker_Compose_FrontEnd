@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  web:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    restart: always
+    volumes:
+      - ./frontend:/usr/share/nginx/html
+
